@@ -7,14 +7,11 @@ const ResponseSchema = new mongoose.Schema(
       required: true,
       trim: true,
       minlingth: 1,
-      maxlingth: 255,
+      maxlingth: 99,
     },
     answers: {
-      type: [],
+      type: [{}],
       required: true,
-      trim: true,
-      minlingth: 1,
-      maxlingth: 255,
     },
   },
   { timestamps: true }

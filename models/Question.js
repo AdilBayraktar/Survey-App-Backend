@@ -9,12 +9,10 @@ const QuestionSchema = new mongoose.Schema(
       minlingth: 1,
       maxlingth: 255,
     },
-    answers: {
+    answersList: {
       type: [String],
       required: true,
-      trim: true,
       minlingth: 1,
-      maxlingth: 255,
     },
   },
   { timestamps: true }

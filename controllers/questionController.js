@@ -9,7 +9,7 @@ const { Question } = require("../models/Question");
 -------------*/
 
 const getAllQuestions = asyncHandler(async (req, res) => {
-  const questions = await Question.find();
+  const questions = await Question.find({});
   res.status(200).json(questions);
 });
 
@@ -38,7 +38,7 @@ const getQuestionById = asyncHandler(async (req, res) => {
 const createNewQuestion = asyncHandler(async (req, res) => {
   const question = await Question.create({
     questionText: req.body.questionText,
-    awnsers: req.body.awnsers,
+    answersList: req.body.answersList,
   });
   res.status(201).json(question);
 });
@@ -61,7 +61,7 @@ const updateQuestion = asyncHandler(async (req, res) => {
     {
       $set: {
         questionText: req.body.questionText,
-        awnsers: req.body.awnsers,
+        answersList: req.body.answersList,
       },
     },
     { new: true }
