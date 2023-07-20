@@ -52,7 +52,7 @@ I have provided documentation inside the codes
 ```
 
 ## Support
-If you encounter any issues or need assistance with the Survey API App, please reach out to us at [Adil Byaraktar]((https://www.linkedin.com/in/adil-bayraktar-78687b1a2/)).
+If you encounter any issues or need assistance with the Survey API App, please reach out to us at [Adil Byaraktar](https://www.linkedin.com/in/adil-bayraktar-78687b1a2/).
 You can also open an issue on our GitHub repository for bug reports or feature requests.
 
 ## Contributing
