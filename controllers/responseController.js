@@ -35,7 +35,6 @@ const getResponseById = asyncHandler(async (req, res) => {
 
 const sendResponse = asyncHandler(async (req, res) => {
   const response = await Response.create({
-    guestName: req.body.guestName,
     answers: req.body.answers,
   });
   res.status(201).json(response);

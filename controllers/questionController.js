@@ -14,6 +14,18 @@ const getAllQuestions = asyncHandler(async (req, res) => {
 });
 
 /**-------------
+* @desc Get All Questions
+* @router /api/questions
+* @method GET
+* @access public
+-------------*/
+
+const getRandomQuestions = asyncHandler(async (req, res) => {
+  const questions = await Question.aggregate([{ $sample: { size: 3 } }]);
+  res.status(200).json(questions);
+});
+
+/**-------------
 * @desc Get One Question
 * @router /api/questions/:id
 * @method GET
@@ -86,6 +98,7 @@ const deleteQuestion = asyncHandler(async (req, res) => {
 
 module.exports = {
   getAllQuestions,
+  getRandomQuestions,
   getQuestionById,
   createNewQuestion,
   updateQuestion,

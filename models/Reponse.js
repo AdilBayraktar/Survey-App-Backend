@@ -2,15 +2,8 @@ const mongoose = require("mongoose");
 
 const ResponseSchema = new mongoose.Schema(
   {
-    guestName: {
-      type: String,
-      required: true,
-      trim: true,
-      minlingth: 1,
-      maxlingth: 99,
-    },
     answers: {
-      type: [{}],
+      type: [],
       required: true,
     },
   },
